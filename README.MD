@@ -68,8 +68,8 @@ $ kubectl get hpa --watch
 
 ## Observação e informações relevantes :exclamation:
 
-O arquivo .env foi comitado propositadamente afim de facilitar a execução do ambiente.
-Cobertura de testes (Teste unitários) não foi aplicado.
-As mensagens de erro e sucesso não foram aplicadas conforme descrito do README do desafio, apesar de existirem poderiam ser mais "amigáveis". 
-O schema foi alterado para ter somente uma tabela.
-Não foi implementado validação das informações de entrada, exceto SKU único.
+* O arquivo .env foi comitado propositadamente afim de facilitar a execução do ambiente.
+* Cobertura de testes (Teste unitários) não foi aplicado.
+* As mensagens de erro e sucesso não foram aplicadas conforme descrito do README do desafio, apesar de existirem poderiam ser mais "amigáveis". 
+* O schema foi alterado para ter somente uma tabela.
+* Não foi implementado validação das informações de entrada, exceto SKU único.
