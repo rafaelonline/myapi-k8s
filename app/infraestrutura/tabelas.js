@@ -7,9 +7,9 @@ class tabelas {
 
     criarSchema() {
         const sql = `
-        create database IF NOT EXISTS hurb_test_assignment default character set utf8mb4 collate utf8mb4_unicode_ci;
+        create database IF NOT EXISTS db_test_assignment default character set utf8mb4 collate utf8mb4_unicode_ci;
           
-        use hurb_test_assignment;
+        use db_test_assignment;
         
         CREATE TABLE IF NOT EXISTS product (
           product_id int UNSIGNED NOT NULL AUTO_INCREMENT,

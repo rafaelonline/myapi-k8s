@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: api-products-container
-          image: rconceicaobr/nodejs-api:v1
+          image: rconceicaobr/nodejs-api:v1.1
           ports:
             - containerPort: 3000
           livenessProbe:

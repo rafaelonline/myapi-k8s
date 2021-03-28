@@ -6,13 +6,13 @@ Utilizando Node.js foi construido uma API REST simples para realizar o CRUD de p
 
 ## Recursos Utilizados :page_facing_up:
 
-* Node.js [v14.15.4-alpine3.12](https://hub.docker.com/_/node)
-* MySQL [v5.7.32](https://hub.docker.com/_/mysql)
-* Minikube [v1.13.0](https://minikube.sigs.k8s.io/docs/start/)
+* Node.js [v14.16.0-alpine3.12](https://hub.docker.com/_/node)
+* MySQL [v5.7.33](https://hub.docker.com/_/mysql)
+* Minikube [v1.18.1](https://minikube.sigs.k8s.io/docs/start/)
 
 ## Requisitos :mag_right:
 
-* minikube v1.13.0 instalado e em execução.
+* minikube instalado e em execução.
 * metrics-server do minikube habilitado (necessário para o HPA).
 ```sh
 $ minikube addons enable metrics-server
@@ -22,22 +22,21 @@ $ minikube addons enable metrics-server
 
 ## Subindo o ambiente :rocket:
 
-1 - Acesse o diretório "k8s", localizado na raiz do repositório;
-2 - Primeiro devemos subir o banco de dados, acesse o diretório "database" e execute:
+1 - Primeiro devemos subir o banco de dados, execute:
 ```bash
-$ kubectl apply -f .
+$ kubectl apply -f ./k8s/database 
 ```
 A aplicação testa a conectividade com o banco antes de subir, caso não seja possível a comunicação a aplicação não sobe.
 
-3 - Valide se o pod do banco de dados subiu com sucesso.
+2 - Valide se o pod do banco de dados subiu com sucesso.
 ```bash
 $ kubectl get pods
 ```
-4 - Agora podemos subir nossa aplicação, para isso acesse o diretório "api" e execute:
+3 - Agora podemos subir nossa aplicação, execute:
 ```bash
-$ kubectl apply -f .
+$ kubectl apply -f ./k8s/api 
 ```
-5 - Valide se o pod da aplicação subiu com sucesso.
+4 - Valide se o pod da aplicação subiu com sucesso.
 ```bash
 $ kubectl get pods
 ```
@@ -68,8 +67,5 @@ $ kubectl get hpa --watch
 
 ## Observação e informações relevantes :exclamation:
 
-* O arquivo .env foi comitado propositadamente afim de facilitar a execução do ambiente.
-* Cobertura de testes (Teste unitários) não foi aplicado.
-* As mensagens de erro e sucesso não foram aplicadas conforme descrito do README do desafio, apesar de existirem poderiam ser mais "amigáveis". 
-* O schema foi alterado para ter somente uma tabela.
-* Não foi implementado validação das informações de entrada, exceto SKU único.
+* O arquivo .env foi comitado propositadamente a fim de facilitar a execução do ambiente.
+* Ambiente criado para estudos, de forma alguma utilize algo daqui em produção sem uma validação de segurança e boas práticas.

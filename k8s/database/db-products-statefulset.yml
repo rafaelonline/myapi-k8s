@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: db-products-container
-          image: mysql:5.7.32
+          image: mysql:5.7.33
           ports:
             - containerPort: 3306
           envFrom:
