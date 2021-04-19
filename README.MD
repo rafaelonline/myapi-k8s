@@ -6,7 +6,7 @@ Utilizando Node.js foi construido uma API REST simples para realizar o CRUD de p
 
 ## Recursos Utilizados :page_facing_up:
 
-* Node.js [v14.16.0-alpine3.12](https://hub.docker.com/_/node)
+* Node.js [lts-alpine3.12](https://hub.docker.com/_/node)
 * MySQL [v5.7.33](https://hub.docker.com/_/mysql)
 * Minikube [v1.18.1](https://minikube.sigs.k8s.io/docs/start/)
 
