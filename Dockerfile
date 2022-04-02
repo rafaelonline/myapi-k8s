@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.12
+FROM node:17.8-bullseye-slim
 WORKDIR /app
 COPY ./app/package*.json .
 RUN npm install
